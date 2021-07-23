@@ -1,0 +1,12 @@
+C:\dev\SKmuseum\MyPage\src\main\java\local\ConfirmCompleted.java
+C:\dev\SKmuseum\MyPage\src\main\java\local\PolicyHandler.java
+C:\dev\SKmuseum\MyPage\src\main\java\local\MyPage.java
+C:\dev\SKmuseum\MyPage\src\main\java\local\MyPageRepository.java
+C:\dev\SKmuseum\MyPage\src\main\java\local\IncrementRequested.java
+C:\dev\SKmuseum\MyPage\src\main\java\local\MyPageApplication.java
+C:\dev\SKmuseum\MyPage\src\main\java\local\AbstractEvent.java
+C:\dev\SKmuseum\MyPage\src\main\java\local\MyPageViewHandler.java
+C:\dev\SKmuseum\MyPage\src\main\java\local\Requested.java
+C:\dev\SKmuseum\MyPage\src\main\java\local\Canceled.java
+C:\dev\SKmuseum\MyPage\src\main\java\local\ForceCanceled.java
+C:\dev\SKmuseum\MyPage\src\main\java\local\config\kafka\KafkaProcessor.java

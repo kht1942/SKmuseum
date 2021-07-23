@@ -1,0 +1,13 @@
+local\Requested.class
+local\AbstractEvent$1.class
+local\config\kafka\KafkaProcessor.class
+local\Confirm.class
+local\AbstractEvent.class
+local\PolicyHandler.class
+local\ForceCanceled.class
+local\ConfirmChanged.class
+local\Canceled.class
+local\ConfirmController.class
+local\ConfirmManageApplication.class
+local\ConfirmRepository.class
+local\ConfirmCompleted.class

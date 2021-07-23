@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: books
+  namespace: skcc04-ns
+  labels:
+    app: books
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: books
+  template:
+    metadata:
+      labels:
+        app: books
+    spec:
+      containers:
+        - name: books
+          image: 879772956301.dkr.ecr.ap-northeast-1.amazonaws.com/user04-order:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: api.museum.url
+              valueFrom:
+                configMapKeyRef:
+                  name: my-config
+                  key: api.museum.url
+          
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: books
+  namespace: skcc04-ns
+  labels:
+    app: books
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: books

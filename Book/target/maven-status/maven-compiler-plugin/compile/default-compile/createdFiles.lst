@@ -1,0 +1,13 @@
+local\BookController.class
+local\Requested.class
+local\AbstractEvent$1.class
+local\BookRepository.class
+local\RequestCompleted.class
+local\config\kafka\KafkaProcessor.class
+local\BookManageApplication.class
+local\AbstractEvent.class
+local\Book.class
+local\PolicyHandler.class
+local\ForceCanceled.class
+local\Canceled.class
+local\ConfirmCompleted.class

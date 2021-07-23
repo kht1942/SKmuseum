@@ -1,0 +1,7 @@
+apiVersion: v1 
+kind: ConfigMap
+metadata:
+  name: my-config
+  namespace: skcc04-ns
+data:
+  api.museum.url: http://Museums:8080

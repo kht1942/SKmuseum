@@ -1,0 +1,69 @@
+server:
+  port: 8080
+---
+
+spring:
+  profiles: default
+  cloud:
+    gateway:
+      routes:
+        - id: Books
+          uri: http://localhost:8081
+          predicates:
+            - Path=/books/**
+        - id: Museums
+          uri: http://localhost:8082
+          predicates:
+            - Path=/museums/** 
+        - id: Confirms
+          uri: http://localhost:8083
+          predicates:
+            - Path=/confirms/** 
+        - id: MyPage
+          uri: http://localhost:8084
+          predicates:
+            - Path= /myPages/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+
+---
+spring:
+  profiles: docker
+  cloud:
+    gateway:
+      routes:
+        - id: Books
+          uri: http://Books:8080
+          predicates:
+            - Path=/books/**
+        - id: Museums
+          uri: http://Museums:8080
+          predicates:
+            - Path=/museums/** 
+        - id: Confirms
+          uri: http://Confirms:8080
+          predicates:
+            - Path=/confirms/**
+        - id: MyPage
+          uri: http://MyPage:8080
+          predicates:
+            - Path= /myPages/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true

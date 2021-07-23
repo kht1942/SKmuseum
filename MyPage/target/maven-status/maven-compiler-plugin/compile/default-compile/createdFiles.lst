@@ -1,0 +1,12 @@
+local\Requested.class
+local\AbstractEvent$1.class
+local\config\kafka\KafkaProcessor.class
+local\MyPageViewHandler.class
+local\AbstractEvent.class
+local\MyPageRepository.class
+local\PolicyHandler.class
+local\MyPageApplication.class
+local\ForceCanceled.class
+local\MyPage.class
+local\Canceled.class
+local\IncrementRequested.class
