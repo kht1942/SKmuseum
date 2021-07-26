@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    _PROJECT_NAME: "confirms"
+    _PROJECT_NAME: "confirm"
     _ECR_NAME: "user11" 
     _NAMESPACE: "user11" 
     _AWS_REGION: "ap-southeast-1"
