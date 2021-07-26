@@ -3,9 +3,9 @@ version: 0.2
 env:
   variables:
     _PROJECT_NAME: "museum" 
-    _ECR_NAME: "user04" 
-    _NAMESPACE: "skcc04-ns"
-    _AWS_REGION: "ap-northeast-1" 
+    _ECR_NAME: "user11" 
+    _NAMESPACE: "user11"
+    _AWS_REGION: "ap-southeast-1" 
 
 phases:
   install:

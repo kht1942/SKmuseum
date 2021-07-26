@@ -27,7 +27,7 @@ public class PolicyHandler{
             System.out.println("##### listener ForceCancel : " + museumDeleted.toJson());
             List<Book> list = bookRepository.findByMuseumId(museumDeleted.getId());
             for(Book temp : list){
-                // 본인이 취소한건은 제외
+                // 자신이 취소한게 아니면
                 if(!"CANCELED".equals(temp.getStatus())) {
                     temp.setStatus("FORCE_CANCELED");
                     bookRepository.save(temp);

@@ -26,7 +26,7 @@ public class PolicyHandler{
     public void wheneverCanceled_BookCanceled(@Payload Canceled canceled){
 
         if(canceled.isMe()){
-            System.out.println("##### 주문 취소 요청으로 인한 수량 변화 : " + canceled.toJson());
+            System.out.println("##### 예약취소로 인한 참석가능인원 변화 : " + canceled.toJson());
             Optional<Museum> temp = museumRepository.findById(canceled.getMuseumId());
 
             if(temp.isPresent()){

@@ -25,8 +25,8 @@ public class PolicyHandler{
     public void wheneverBookdRequested_ConfirmComplete(@Payload Requested requested){
 
         if(requested.isMe()){
-            //  주문 요청으로 인한 제조 확정
-            System.out.println("##### 주문 요청으로 인한 제조 확정: " + requested.toJson());
+            //  예약으로 인한 입장승인 확정
+            System.out.println("##### 예약 요청으로 인한 입장 승인: " + requested.toJson());
             if(requested.isMe()){
                 Confirm temp = new Confirm();
                 temp.setStatus("REQUEST_COMPLETED");
@@ -43,7 +43,7 @@ public class PolicyHandler{
 
         if(museumDeleted.isMe()){
             System.out.println("##### listener ForcedConfirmCanceled : " + museumDeleted.toJson());
-            //  카페 종료로 인해 제조 상태 변경
+            //  전시 종료로 인해 입장승인 변경
             List<Confirm> list = confirmRepository.findByMuseumId(String.valueOf(museumDeleted.getId()));
             for(Confirm temp : list){
                 if(!"CANCELED".equals(temp.getStatus())) {
@@ -57,7 +57,7 @@ public class PolicyHandler{
     public void wheneverCanceled_ConfirmCancel(@Payload Canceled canceled){
 
         if(canceled.isMe()){
-            //  주문 취소로 인한 취소
+            //  예약 취소로 인한 취소
             Confirm temp = confirmRepository.findByBookId(canceled.getId());
             temp.setStatus("CANCELED");
             confirmRepository.save(temp);
