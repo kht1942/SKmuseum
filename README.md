@@ -302,9 +302,10 @@ CQRS 를 위한 Mypage 서비스만 DB를 구분하여 적용함. 인메모리 D
 ![](https://i.imgur.com/7BbzLGi.png)
 
 
-- 신규 예약 등록
+- 예약 등록 취소
 
-![](https://i.imgur.com/clVdLjl.png)
+![](https://i.imgur.com/9UydM51.png)
+
 
 - 입장승인 확인 불가
 
